@@ -44,7 +44,7 @@ int _mycd(info_t *info)
 		_puts("TODO: >>getcwd failure emsg here<<\n");
 	if (!info->argv[1])
 	{
-		ir = _getenv(info, "HOME=");
+		dir = _getenv(info, "HOME=");
 		if (!dir)
 			chdir_ret = /* TODO: what should this be? */
 				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
